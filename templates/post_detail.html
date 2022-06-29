@@ -42,7 +42,7 @@
 
                                 <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-heart"> </i> </button>
                                 {%else%}
-                                
+
                                 <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-heart"> </i> </button>
                                 {%endif%}
 
@@ -117,5 +117,12 @@
         </div>
     </div>
 </div>
+<h3> ehhah</h3>
+                {% for message in messages %}
+                <div class="alert-success {{ message.tags }} success-dismissible fade show" id="msg" role="success">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="success" aria-label="Close"></button>
+                </div>
+                {% endfor %}
 
 {% endblock content %}
